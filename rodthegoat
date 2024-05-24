@@ -1,4 +1,4 @@
-local setspeed = 16.7 --Adding this for the script kiddies if you're a developer you can just remove this line
+local setspeed = 8 --Adding this for the script kiddies if you're a developer you can just remove this line
 
 local WalkSpeedSpoof = getgenv().WalkSpeedSpoof
 local Disable = WalkSpeedSpoof and WalkSpeedSpoof.Disable
