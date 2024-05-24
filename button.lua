@@ -1,4 +1,4 @@
-local setspeed = 16.9 --Adding this for the script kiddies if you're a developer you can just remove this line
+local setspeed = 16.7 --Adding this for the script kiddies if you're a developer you can just remove this line
 
 local WalkSpeedSpoof = getgenv().WalkSpeedSpoof
 local Disable = WalkSpeedSpoof and WalkSpeedSpoof.Disable
@@ -169,6 +169,7 @@ getgenv().WalkSpeedSpoof = WalkSpeedSpoof
 -- Toggle functionality
 local toggle = true
 local UIS = game:GetService("UserInputService")
+local StarterGui = game:GetService("StarterGui")
 
 function toggleScript()
     toggle = not toggle
@@ -176,8 +177,18 @@ function toggleScript()
         if setspeed then
             WalkSpeedSpoof:SetWalkSpeed(setspeed)
         end
+        StarterGui:SetCore("SendNotification", {
+            Title = "WalkSpeedSpoof";
+            Text = "Enabled";
+            Duration = 2;
+        })
     else
         WalkSpeedSpoof:Disable()
+        StarterGui:SetCore("SendNotification", {
+            Title = "WalkSpeedSpoof";
+            Text = "Disabled";
+            Duration = 2;
+        })
     end
 end
 
